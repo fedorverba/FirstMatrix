@@ -2,9 +2,9 @@ public class Matrix{
 int n,m;
     double arr[][];
 Matrix(int n,int m){
-    arr = new double[n][m];
     this.n = n;
     this.m = m;
+    arr = new double[n][m];
 }
 Matrix(int n){
 arr=new double[n][n];
@@ -18,9 +18,11 @@ arr=new double[1][1];
     arr[0][0]=0;
 }
 Matrix(double arr[][]){
+    this.n=arr.length;
+    this.m=arr[1].length;
     this.arr = new double[n][m];
 for (int i=0;i<arr.length;i++){
-    for (int j=1;j<arr[i].length;j++){
+    for (int j=0;j<arr[i].length;j++){
         this.arr[i][j]=arr[i][j];
     }
 }
@@ -28,7 +30,7 @@ for (int i=0;i<arr.length;i++){
 public String toString(){
     String s="Matrix{"+"\n";
     for (int i=0;i<arr.length;i++){
-        for (int j=1;j<arr[i].length;j++){
+        for (int j=0;j<arr[i].length;j++){
             s+=arr[i][j]+" ";
         }
         s+="\n";
