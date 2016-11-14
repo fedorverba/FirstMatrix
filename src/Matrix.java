@@ -26,6 +26,14 @@ for (int i=0;i<arr.length;i++){
 }
 }
 public String toString(){
-    System.out.println();
+    String s="Matrix{"+"\n";
+    for (int i=0;i<arr.length;i++){
+        for (int j=1;j<arr[i].length;j++){
+            s+=arr[i][j]+" ";
+        }
+        s+="\n";
+    }
+s+="}";
+    return s;
 }
 }
